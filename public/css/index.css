@@ -1,0 +1,37 @@
+
+*{
+    box-sizing: border-box;
+  }
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  
+ul{
+list-style:none;
+}
+  body { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align:center;
+  }
+.well{
+    display:flex;
+  }
+  .wellcontent{
+width:50%;
+  }
+
+  .wellimg{
+    width:25%;
+  }
+  .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cheesteaks</title>
+  <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="jumbotron text-center">
+    <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Login</a>
+    <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Signup</a>
+
+  </div>
+  <h1>My Bucket List</h1>
+  <h2>What do you want to do?</h2>
+
+
+  <form action="/Crud1" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="location" name="location">
+    <input type="text" placeholder="budget" name="budget">
+    <input type="text" placeholder="link" name="link">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
