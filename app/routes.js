@@ -71,6 +71,7 @@ app.post('/uploadPhoto', upload.single('photo'), (req, res) => {
   const id = req.body.id; // The ID of the document you want to update
   const photoPath = `/uploads/${req.file.filename}`; // Path of uploaded file
 console.log(id)
+
   db.collection('Crud1').updateOne(
       { _id: ObjectId(id) },
       { $set: { photo: photoPath } },

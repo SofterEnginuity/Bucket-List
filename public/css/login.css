@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /******************************************
+    /* LAYOUT
+    /*******************************************/
+  
+  ul {
+    list-style: none;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn {
+    height: 30px;
+    margin-top: 9px;
+  }
+  
+  button {
+    height: 25px;
+  }
+  
+  
+
+  
+  .text-center{
+    display: flex;
+    flex-direction:column;
+  
+  }

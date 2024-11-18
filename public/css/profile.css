@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .page-header {
+    margin: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+  }
+.top{
+    text-align:center;
+}
+.btn {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    z-index: 1000;
+}
+.well {
+    display: flex;
+    padding: 30px;
+    height:200px;
+
+}
+h1 {
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+}
+h3{
+    padding:1px;
+}
+.wellcontent {
+    width: 50%;
+    margin-top: -39px;
+    text-align:left;
+}
+.sub{
+    display:flex;
+    flex-direction: column;
+}
+#img{
+    height:30px;
+    width:50px;
+}
+#trash {
+    position: relative;
+    z-index: 10;
+
+    right: 30%;
+    top: 15px;
+}
+.image {
+    margin-top: -170px;
+    width: 174px;
+    height: 100px;
+}
+
+
+.fa-bucket, fa-solid{
+    position: relative;
+    z-index: 10;
+
+    right: 30%;
+    top: 15px;
+}

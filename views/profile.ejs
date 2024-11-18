@@ -1,47 +1,50 @@
 <!doctype html>
 <html>
   <head>
-    <title>21 Savage Fan Site</title>
-    <link rel="stylesheet"
-      href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet"
-      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <title>Bucket List</title>
+       <link rel="stylesheet" href="css/profile.css"> 
+   <!-- <link rel="stylesheet" href="css/index.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Delicious+Handrawn&family=Mrs+Saint+Delafield&family=Notable&family=PT+Sans&family=Playfair+Display&family=Smooch&family=Wendy+One&display=swap"
-      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet"  href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+  
+      
+ 
+    
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <div class="container">
 
       <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> My Bucket List</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <h1>My Bucket List</h1>
+ <span><i class="fa-duotone fa-solid fa-bucket"></i></span>
 
         <form action="/messages" method="POST">
+          
           <input type="text" placeholder="name" name="name">
           <input type="text" placeholder="location" name="location">
           <input type="text" placeholder="budget" name="budget">
-          <input type="text" placeholder="link" name="link">
-          <button type="submit">Add Item</button>
+          <button class= "sbtn" type="submit">Add Item</button>
         </form>
       </div>
-
+       <a href="/logout" id="btn" class="btn btn-default btn-sm">Sign Out</a>
       <div class="row">
 
         <!-- LOCAL INFORMATION -->
-        <div class="col-sm-6">
-
-        </div>
+        
       </div>
 
       <div class="col-sm-6">
         <% for(var i=0; i<items.length; i++) {%>
+          <div class="sub">
           <div class="well">
             <div class="wellcontent">
-              <h3><span class="fa fa-user"></span><%= items[i].name %></h3>
+              <h3><i class="fa-solid fa-bucket"></i>
+              </span><%= items[i].name %></h3>
               <p>
                 <strong>Location</strong>:
                 <span class="editable" data-id="<%= items[i]._id %>"
@@ -55,33 +58,35 @@
                 <i class="fa fa-edit edit-icon" data-id="<%= items[i]._id %>"
                   data-field="budget" aria-hidden="true"></i><br>
 
-                <strong>Link</strong>: <%= items[i].link %><br>
-                <span><%= items[i].thumbUp %><i class="fa fa-thumbs-up"
-                    aria-hidden="true"></i></span>
-
-                <span><%= items[i].thumbUp %><i class="fa fa-thumbs-up"
-                    aria-hidden="true"></i></span>
-                <span class="delete-icon" data-id="<%= items[i]._id %>">
-                  <i class="fa fa-trash-o" aria-hidden="true"></i>
-                </span>
               </p>
-            </div>
+            </div> 
             <div class="wellimg">
               <form action="/uploadPhoto" method="POST" enctype="multipart/form-data">
                 <input type="file" required name="photo" id="file<%= i %>" class="inputfile" />
                 <input hidden name="id" value="<%= items[i]._id %>"></input>
+               <section>
                 <label for="file<%= i %>" >Choose a file</label>
-                <button type="submit">Upload</button>
+                <button type="submit">Upload</button></section>
               </form>
+              </div>
+            </div>
+            <div class="pics">
+          <span class="delete-icon" data-id="<%= items[i]._id %>">
+            </i>
+          </span>
+
+           
               <!-- Display uploaded photo if it exists -->
+            
               <% if (items[i].photo) { %>
-              <img src="<%= items[i].photo %>" alt="Uploaded photo"
-                width="100px" height="auto">
+              <img src="<%= items[i].photo %>"  alt="Uploaded photo"
+                width="100px" height="auto" class="image">
               <% } %>
             </div>
-          </div><% } %>
-
+          </div><% } %><i id="trash" class="fa fa-trash-o trash" aria-hidden="true"></i>
         </div>
+      </div>
+        
 
         <script src="main.js"></script>
 

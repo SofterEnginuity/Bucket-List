@@ -1,37 +1,103 @@
+* {
+  box-sizing: border-box;
+}
 
-*{
-    box-sizing: border-box;
-  }
-  
-  /******************************************
+/******************************************
   /* LAYOUT
   /*******************************************/
-  
-ul{
-list-style:none;
-}
-  body { 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align:center;
-  }
-.well{
-    display:flex;
-  }
-  .wellcontent{
-width:50%;
-  }
 
-  .wellimg{
-    width:25%;
-  }
-  .inputfile {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-  }
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+header{
+  display:flex;
+  width:100%;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-top: 10px;
+  width: 100%;
+  margin-left:110px;
+}
+
+.page-header {
+  margin: 1px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+p{
+  padding:0px;
+  height:0px;
+}
+/* .btn {
+  height: 20px;
+  margin-top: 9px;
+  
+} */
+
+button {
+  height: 25px;
+}
+
+.col-sm-6 {
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.fa{
+  align-self:flex-start;
+}
+form {
+  display: flex;
+}
+
+.well {
+  display: flex;
+}
+
+.wellcontent {
+  width: 50%;
+}
+
+.wellimg {
+  width: 25%;
+}
+
+.home{
+width:600px;
+height:450px;
+}
+/* img{
+  
+} */
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.title{
+  width:80%;
+}
+.jumbotron {
+  display: flex;
+  flex-direction:column;
+
+width:20%
+}
