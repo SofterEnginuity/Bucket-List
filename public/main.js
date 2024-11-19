@@ -1,6 +1,6 @@
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 
-var trash = document.getElementsByClassName("fa-trash-o");
+
 
 Array.from(thumbUp).forEach(function(element) {
       element.addEventListener('click', function(){
@@ -69,50 +69,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //photo upload
 
-// document.querySelectorAll('.photo-upload-form').forEach(form => {
-//   form.addEventListener('submit', function(e) {
-//     console.log("testing upload")
-//     e.preventDefault();
 
-//     const formData = new FormData();
-//     const id = this.dataset.id;
-//     const fileInput = this.querySelector('input[type="file"]');
-
-//     if (fileInput.files.length === 0) {
-//       alert('Please select a file to upload.');
-//       return;
-//     }
-
-//     formData.append('photo', fileInput.files[0]);
-//     formData.append('_id', id);
-
-//     fetch('/uploadPhoto', {
-//       method: 'POST',
-//       body: formData
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//       if (data.success) {
-//         window.location.reload(); // Reload to display the uploaded image
-//       } else {
-//         console.error('Upload failed:', data.error);
-//       }
-//     })
-//     .catch(error => console.error('Error:', error));
-//   });
-// });
-
-
-document.querySelectorAll('.delete-icon').forEach(element => {
+document.querySelectorAll('.fa-trash').forEach(element => {
   element.addEventListener('click', function() {
     const itemId = this.dataset.id;
 
-    fetch('/messages', {
+    fetch(`/messages/${itemId}`, {
       method: 'DELETE',
+      //  body: JSON.stringify({ _id: itemId }),
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ _id: itemId })
+     
     })
     .then(response => {
       if (response.ok) {

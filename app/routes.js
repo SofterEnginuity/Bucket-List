@@ -36,7 +36,7 @@ module.exports = function(app, passport, db) {
 // message board routes ===============================================================
 
     app.post('/messages', (req, res) => {
-      db.collection('Crud1').save({name: req.body.name, location: req.body.location, budget: req.body.budget, link: req.body.link}, (err, result) => {
+      db.collection('Crud1').save({name: req.body.name, location: req.body.location, budget: req.body.budget}, (err, result) => {
         if (err) return console.log(err)
         console.log('saved to database')
         res.redirect('/profile')
@@ -98,10 +98,11 @@ console.log(id)
     //   })
     // })
 
-    app.delete('/messages', (req, res) => {
-      const itemId = req.body._id;
-    
-      db.collection('Crud1').findOneAndDelete({ _id: new ObjectId(itemId) }, (err, result) => {
+    app.delete('/messages/:itemId', (req, res) => {
+      // const itemId = req.body._id;
+    console.log(req.params.itemId)
+      db.collection('Crud1').findOneAndDelete({ _id: new ObjectId(req.params.itemId) }, (err, result) => {
+        
         if (err) return res.status(500).send(err);
         res.send('Item deleted!');
       });

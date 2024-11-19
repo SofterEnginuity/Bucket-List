@@ -6,7 +6,7 @@
    <!-- <link rel="stylesheet" href="css/index.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <link rel="stylesheet"  href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
@@ -21,7 +21,7 @@
 
       <div class="page-header text-center">
         <h1>My Bucket List</h1>
- <span><i class="fa-duotone fa-solid fa-bucket"></i></span>
+ 
 
         <form action="/messages" method="POST">
           
@@ -82,8 +82,8 @@
               <img src="<%= items[i].photo %>"  alt="Uploaded photo"
                 width="100px" height="auto" class="image">
               <% } %>
-            </div>
-          </div><% } %><i id="trash" class="fa fa-trash-o trash" aria-hidden="true"></i>
+            </div><i class="fa-solid fa-trash" data-id="<%= items[i]._id %>"></i>
+          </div><% } %>
         </div>
       </div>
         
