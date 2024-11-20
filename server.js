@@ -21,14 +21,14 @@ try{
  configDB = require('./config/database.js');
 }catch(err){
   configDB = {
-    url : process.env.url,
-    dbName : 'Crud1'
+    url : process.env.url.replace('DBNAME','Crud1'),
   }
 }
 
 var db
 
 // configuration ===============================================================
+mongoose.c
 mongoose.connect(configDB.url, (err, database) => {
   if (err) return console.log(err)
   db = database
