@@ -13,3 +13,10 @@ HTML, CSS, Javascript, Node, Express, MongoDB
 
 ## Lessons Learned:
 I learned quite a bit from this assignment like managing items in a database, how to render those items, file management, and more! I think the photo upload feature was both my favorite and least favorite part about this project!
+
+
+## Installation/Usage
+1. Clone repo
+2. run `npm install`
+3. run `node server.js`
+4. Navigate to `localhost:7070`
