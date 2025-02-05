@@ -2,6 +2,7 @@
 
 // set up ======================================================================
 // get all the tools we need
+require('dotenv').config();
 var express  = require('express');
 var app      = express();
 
@@ -17,19 +18,11 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
 var configDB 
-try{
- configDB = require('./config/database.js');
-}catch(err){
-  configDB = {
-    url : process.env.url.replace('DBNAME','Crud1'),
-  }
-}
-
 var db
 
 // configuration ===============================================================
-mongoose.c
-mongoose.connect(configDB.url, (err, database) => {
+console.log('DBURL',process.env.DBURL)
+mongoose.connect(process.env.DBURL, (err, database) => {
   if (err) return console.log(err)
   db = database
   require('./app/routes.js')(app, passport, db);
